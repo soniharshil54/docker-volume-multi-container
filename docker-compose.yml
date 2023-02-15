@@ -1,0 +1,26 @@
+version: '3.7'
+services:
+  service1:
+    build:
+      dockerfile: Dockerfile.1
+    image: testimg1:latest
+    networks:
+      - folder-network
+    volumes:
+       - ./hostfolder:/home/containeruser/testfolder1
+    command: /bin/sh -c "tail -F anything"
+
+  service2:
+    build:
+      dockerfile: Dockerfile.2
+    image: testimg2:latest
+    networks:
+      - folder-network
+    volumes:
+      - ./hostfolder:/home/containeruser/testfolder2
+    command: /bin/sh -c "tail -F anything" 
+
+networks:
+  folder-network:
+    name: folder-network
+    driver: bridge
