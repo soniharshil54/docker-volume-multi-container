@@ -1,3 +1,4 @@
 docker-compose -f docker-compose.yml up --build -d
 
-docker exec -it CONTAINER_ID /bin/sh
+docker exec -it CONTAINER_1_ID /bin/sh
+docker exec -it CONTAINER_2_ID /bin/sh
