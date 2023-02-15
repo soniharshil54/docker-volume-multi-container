@@ -1,6 +1,6 @@
 FROM alpine:3.12
 # Create user and set ownership and permissions as required
-RUN addgroup --g 1000 vizabli
-RUN adduser -u 1000 -G vizabli -h /home/containeruser -D vizabli
+RUN addgroup --g 9000 vizabli
+RUN adduser -u 9000 -G vizabli -h /home/containeruser -D vizabli
 USER vizabli
 RUN mkdir /home/containeruser/testfolder2

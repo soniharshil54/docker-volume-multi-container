@@ -2,6 +2,7 @@ version: '3.7'
 services:
   service1:
     build:
+      context: ./
       dockerfile: Dockerfile.1
     image: testimg1:latest
     networks:
@@ -12,6 +13,7 @@ services:
 
   service2:
     build:
+      context: ./
       dockerfile: Dockerfile.2
     image: testimg2:latest
     networks:
